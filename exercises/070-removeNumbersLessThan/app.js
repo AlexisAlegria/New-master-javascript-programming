@@ -5,4 +5,11 @@ var obj = {
 }
 function removeNumbersLessThan(num, obj) {
     // your code here
+    for(var property in obj){
+        if(obj[property] < num){
+            delete obj[property];
+        }
+    }
 }
+removeNumbersLessThan(5, obj);
+console.log(obj); 
