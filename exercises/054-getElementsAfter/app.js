@@ -3,4 +3,4 @@ function getElementsAfter(array, n) {
   return array.slice(array.length-n);
 }
 var output = getElementsAfter(['a', 'b', 'c', 'd', 'e'], 2); 
-console.log(output);
+console.log(output, typeof output);

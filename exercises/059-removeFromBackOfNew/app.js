@@ -1,7 +1,7 @@
 function removeFromBackOfNew(arr) {
   // your code here
-  arr.pop();
-  return arr;
+  return arr.slice(0,2);
+
 }
 var arr = [1, 2, 3];
 var output = removeFromBackOfNew(arr);

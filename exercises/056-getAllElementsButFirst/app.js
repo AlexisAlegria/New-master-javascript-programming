@@ -1,6 +1,6 @@
 function getAllElementsButFirst(array) {
   // your code here
-  return array.splice(1,3)
+  return array.slice(1)
 }
 var input = [1, 2, 3, 4];
 var output = getAllElementsButFirst(input);
