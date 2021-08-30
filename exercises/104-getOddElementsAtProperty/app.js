@@ -4,6 +4,10 @@ var obj = {
 
 function getOddElementsAtProperty(obj, key) {
     // your code here
+    var newArray = obj[key].filter(function(i){
+      return i % 2 != 0;
+    });
+    return newArray;
 }
 
 var output = getOddElementsAtProperty(obj, 'key');

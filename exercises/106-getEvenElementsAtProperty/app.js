@@ -4,7 +4,14 @@ var obj = {
 };
 
 function getEvenElementsAtProperty(obj, key) {
-    // your code here
+    if(obj[key].length == 0 || Array.isArray === false ||
+      obj[key] === undefined){
+        return [];
+      }
+    var newArray = obj[key].filter(function(i){
+      return i % 2 == 0;
+    });
+    return newArray;
 }
 var output = getEvenElementsAtProperty(obj, 'key');
 console.log(output); // --> [1000, 50]
