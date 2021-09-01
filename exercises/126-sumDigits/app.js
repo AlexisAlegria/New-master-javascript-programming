@@ -1,5 +1,12 @@
 function sumDigits(num) {
-    // your code here
+    var numbers = num.toString().split("");
+    var sum = 0;
+    var newArr = [];
+    for(i=0; i<numbers.length; i++){
+        newArr.push(Number(numbers[i]));
+        sum = newArr.reduce((a, b) => a + b,0);
+    }
+    return sum;
 }
-var output = sumDigits(316);
+var output = sumDigits(-316);
 console.log(output); // --> 4
