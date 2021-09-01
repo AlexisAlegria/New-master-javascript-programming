@@ -15,5 +15,5 @@ function getElementOfArrayProperty(obj, key, index) {
 
     return obj[key][index];
 }
-var output = getElementOfArrayProperty(obj, 'key', 0); 
+var output = getElementOfArrayProperty(obj, 'key', 1); 
 console.log(output); // --> 'Jamil'
