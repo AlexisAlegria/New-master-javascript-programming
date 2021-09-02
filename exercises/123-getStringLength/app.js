@@ -7,5 +7,5 @@ function getStringLength(string) {
         return charCount;
 }
 
-var output = getStringLength('hello');
+var output = getStringLength('hellopp');
 console.log(output); // --> 5
