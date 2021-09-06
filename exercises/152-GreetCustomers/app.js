@@ -13,15 +13,19 @@ var customerData = {
   }
 };
 function greetCustomer(firstName){
-  if (customerData.visits === 1) {
-    return (`Welcome back, ${customerData.name}! We're so glad you liked us the first time!`);
-  } else {
-    if (customerData.visits > 1) {
-    return (`Welcome back, ${customerData.name}! So glad to see you again!`);
-    } else {
-    return (`Welcome! Is this your first time?`);
-    }
-  }
+   var greeting = '';
+   for(var keys in customerData){
+     for(var value in customerData[keys]){
+       if(keys === firstName && customerData[keys][value] == 1){
+         greeting = "Welcome back, " + firstName + "! We're glad you liked us the first time!";
+       } else if (keys === firstName && customerData[keys][value] > 1){
+        greeting = 'Welcome back, ' + firstName + '! So glad to see you again!';
+       } else if(!(firstName in customerData)) {
+        greeting = 'Welcome! Is this your first time?'
+       }
+     }
+   }
+   return greeting;
 }
 var output = greetCustomer('Carol');
 console.log(output);
