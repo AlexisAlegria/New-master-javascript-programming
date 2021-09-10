@@ -1,29 +1,37 @@
-function PhoneNumberFormatter(numbers) {
-  this.numbers = numbers;
+function createPhoneNumber(arr) {
+  return `(${arr.slice(0, 3).join('')}) ${arr.slice(3, 6).join('')}-${arr.slice(6).join('')}`;
 }
+phoneNumberArray = [6, 5, 0, 8, 3, 5, 9, 1, 7, 2];
+var output = createPhoneNumber(phoneNumberArray);
+console.log(output);
 
-PhoneNumberFormatter.prototype.render = function() {
-  var string = '';
-  // your code here
-  return string;
-};
 
-PhoneNumberFormatter.prototype.getAreaCode = function() {
-  // your code here
-};
+// function PhoneNumberFormatter(numbers) {
+//   this.numbers = numbers;
+// }
 
-PhoneNumberFormatter.prototype.getExchangeCode = function() {
-  // your code here
-};
+// PhoneNumberFormatter.prototype.render = function() {
+//   var string = '';
+//   // your code here
+//   return string;
+// };
 
-PhoneNumberFormatter.prototype.getLineNumber = function() {
-  // your code here
-};
+// PhoneNumberFormatter.prototype.getAreaCode = function() {
+//   // your code here
+// };
 
-PhoneNumberFormatter.prototype.parenthesize = function(string) {
-  return '(' + string + ')';
-};
+// PhoneNumberFormatter.prototype.getExchangeCode = function() {
+//   // your code here
+// };
 
-PhoneNumberFormatter.prototype.slice = function(start, end) {
-  return this.numbers.slice(start, end).join('');
-};
+// PhoneNumberFormatter.prototype.getLineNumber = function() {
+//   // your code here
+// };
+
+// PhoneNumberFormatter.prototype.parenthesize = function(string) {
+//   return '(' + string + ')';
+// };
+
+// PhoneNumberFormatter.prototype.slice = function(start, end) {
+//   return this.numbers.slice(start, end).join('');
+// };
