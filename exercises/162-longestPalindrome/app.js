@@ -7,7 +7,6 @@ function printSubStr(str,low,high)
 }
 function longestPalSubstr(str)
 {
-    let n = str.length;
     let maxLength = 1, start = 0;
     for (let i = 0; i < str.length; i++) {
         for (let j = i; j < str.length; j++) {
