@@ -25,9 +25,11 @@ function renderInventory(inventory)
       outPutArray.push(`${items.name}, ${items.shoes[i].name}, ${items.shoes[i].price}`)
         }
     });
-    return outPutArray;
+    return outPutArray.map(a => [a]);
+
 }
-console.log(renderInventory(currentInventory));
+var output = (renderInventory(currentInventory));
+console.log(output);
 
 
 // function renderInventory(inventory)
